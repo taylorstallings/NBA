@@ -55,3 +55,13 @@ gg2 <- ggplot(data1, aes(x = TPtPercentage, y=TwoPtAttempted)) +
   geom_smooth(colour = 'red')
 
 gg2
+
+library(dplyr)
+library(nbastatR)
+df_asg <-
+  get_all_star_game_scores()
+df_asg %>% glimpse()
+df_asg %>% count(namePlayerMVP, sort = T)
+
+dictionary_nba_names()
+get_nba_stats_api_items()
